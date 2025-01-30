@@ -1,0 +1,13 @@
+type Order {
+  id: Int!
+  payment_method: String!
+  total: Float!
+  date_purchase: String!
+  status: String!
+  created_at: String!
+  updated_at: String!
+}
+
+type Query {
+  Orders: [Order!]!
+}
