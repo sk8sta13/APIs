@@ -55,3 +55,15 @@ call ListOrders
 Veja o exemplo no print abaixo:
 
 ![image](https://github.com/user-attachments/assets/0afb6362-c57a-40fc-a2f4-c5e559fb344d)
+
+### GraphQL
+
+Utilizamos o pacote [gqlgem](https://gqlgen.com/) para criar a estrutura da API Para rodar a API GraphQL devemos executar o seguinte comando:
+
+```
+go run cmd/graphql/main.go
+```
+
+Em seguida, no navegador podemos acessar o ambiente de playground por meio da url "http://localhost:8080/", então podemos executar nossas querys, conforme no print de exemplo abaixo:
+
+![image](https://github.com/user-attachments/assets/667849b2-b9d3-41ad-9600-4af1c7d34ff3)
