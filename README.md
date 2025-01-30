@@ -19,3 +19,13 @@ Para parar o container execute o stop:
 ```
 docker compose stop
 ```
+
+### REST
+
+Para rodar o endpoint REST é só executar o comando:
+
+```
+go run cmd/rest/main.go
+```
+
+E executar a request configurada no arquivo "test/order.http". Veja um print do exemplo abaixo:
