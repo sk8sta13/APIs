@@ -1,0 +1,23 @@
+syntax = "proto3";
+package pb;
+option go_package = "Internal/pb";
+
+message Order {
+    int32 id = 1;
+    string payment_method = 2;
+    float total = 3;
+    string date_purchase = 4;
+    string status = 5;
+    string created_at = 6;
+    string updated_at = 7;
+}
+
+message Orders {
+    repeated Order list = 1;
+}
+
+message Blank {}
+
+service OrderService {
+    rpc ListOrders(Blank) returns (Orders) {}
+}
