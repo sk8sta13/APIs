@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  api-db:
+    image: mysql:5.7
+    container_name: api-mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: 'api'
+      MYSQL_ROOT_PASSWORD: "101010"
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+      - ./docker/mysql/dump:/docker-entrypoint-initdb.d
