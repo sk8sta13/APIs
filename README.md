@@ -29,3 +29,5 @@ go run cmd/rest/main.go
 ```
 
 E executar a request configurada no arquivo "test/order.http". Veja um print do exemplo abaixo:
+
+![image](https://github.com/user-attachments/assets/79b40759-f91f-4dab-97a4-ae9393994b91)
