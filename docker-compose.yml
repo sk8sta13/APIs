@@ -1,8 +1,7 @@
-version: '3.7'
 services:
   api-db:
     image: mysql:5.7
-    container_name: api-mysql
+    container_name: api-db
     restart: always
     ports:
       - "3306:3306"
@@ -12,3 +11,39 @@ services:
     volumes:
       - ./docker/mysql/data:/var/lib/mysql
       - ./docker/mysql/dump:/docker-entrypoint-initdb.d
+  api-rest:
+    build:
+      context: .
+    container_name: api-rest
+    working_dir: /go/src/app
+    command: go run cmd/rest/main.go
+    depends_on:
+      - api-db
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/go/src/app
+  api-grpc:
+    build:
+      context: .
+    container_name: api-grpc
+    working_dir: /go/src/app
+    command: go run cmd/grpc/main.go
+    depends_on:
+      - api-db
+    ports:
+      - "50051:50051"
+    volumes:
+      - .:/go/src/app
+  api-graphql:
+    build:
+      context: .
+    container_name: api-graphql
+    working_dir: /go/src/app
+    command: go run cmd/graphql/main.go
+    depends_on:
+      - api-db
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/go/src/app
