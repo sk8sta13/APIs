@@ -14,6 +14,8 @@ docker compose up -d
 
 Isso fara com que um container com o banco dedados MySQL seja criado e também seja feito o dump de uma pequena quantidade de dados apenas para testes.
 
+https://github.com/user-attachments/assets/298140d7-5a40-4765-958e-fb1ea15a560d
+
 Para parar o container execute o stop:
 
 ```
