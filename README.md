@@ -12,7 +12,7 @@ Clone esse repositório e em seguida entre na pasta do projeto e la dentro execu
 docker compose up -d
 ```
 
-Isso fara com que um container com o banco dedados MySQL seja criado e também seja feito o dump de uma pequena quantidade de dados apenas para testes.
+Isso fara com que um container com o banco dedados MySQL seja criado e também seja feito o dump de uma pequena quantidade de dados apenas para testes, outros três containers seráo upados um que publica uma API REST na porta 8000, outro que publica uma API gRPC na porta 50051 e por fim uma ultima API GraphQL na porta 8080. Veja o teste executado no video abaixo:
 
 https://github.com/user-attachments/assets/298140d7-5a40-4765-958e-fb1ea15a560d
 
